@@ -1,25 +1,27 @@
 import React from "react"
-import projectList from "../projectList"
-import styled from "styled-components"
-import * as layouts from "../layouts"
+import projectList from "../assets/projectList"
+import styled from "@emotion/styled"
+import * as system from "styled-system"
 import { Link } from "react-router-dom"
-import Toolbar from "../Toolbar"
-const Pic = styled.img`
-border-radius: 50px;
-border:2px solid black;
-`
+import Toolbar from "../layouts/Toolbar"
+import * as layouts from "../layouts"
 
-const Projects = () => (
-    <>
-        <Toolbar />
-        {projectList.map((project, key) => (
-            <Link to={`/project/${project.name}`}>
-                < h1 >{project.name}</h1>
-                <p>{project.overview}</p>
-            </Link>
-        ))}
-    </>
-)
+const Projects = () => {
+    return (
+        <>
+
+            <ul>
+               Click to learn what I have worked on
+                {projectList.map((project, key) => (
+                    <li key={key}>
+                        <Link to={`/project/${project.name}`} > < h2 color="black">{project.title}</h2> </Link>
+                        <p>{project.overview}</p>
+                    </li>
+
+                ))}
+            </ul>
+        </>)
+}
 
 
 export default Projects

@@ -1,7 +1,14 @@
 import styled from "styled-components";
+import * as Icons from "../icons/reacticon"
 const Foot = styled.div`
-background:blue; 
-color:white;
+    background:blue; 
+    color:white;
+    text-align:center;
+    margin:0px;
+`
+const HyperLink = styled.a`
+    color:white;
+    text-decorations:none;
 `
 
 function footer() {
@@ -9,10 +16,13 @@ function footer() {
         <Foot>
             <h3>Get Connected</h3>
             <div>Nolan Bruner</div>
-            <div>Phone: (502)-681-3983</div>
-            <div>Email: nwbr227@uky.edu</div>
-            <div>Github</div>
-            <div>linkedin</div>
+            <HyperLink href="tel:5026813983">Phone: (502)-681-3983</HyperLink>
+            <div></div>
+            <HyperLink>Email: nwbr227@uky.edu</HyperLink>
+            <div></div>
+            <HyperLink href="">Github</HyperLink>
+            <div></div>
+            <HyperLink href="">linkedin</HyperLink>
         </Foot>
     )
 }
