@@ -5,49 +5,101 @@ import * as system from "styled-system"
 import styled from "@emotion/styled"
 import { ContainerProps } from "./style"
 const ToolContainer = styled.div<ContainerProps>`
-width: 50vw;
-background-color:white;
-border-radius:45px 10px 0px 0px;
-padding:10px;
-opacity:.8;
-
-
-${system.space}
-${system.width}
-${system.layout}
-${system.backgroundImage}
+    width: 33vw;
+    padding:20px;
+    background-color:white;
+    border-radius:45px 10px 0px 0px;
+    padding:10px;
+    opacity:.8;
+    ${system.space}
+    ${system.width}
+    ${system.layout}
+    ${system.backgroundImage}
 `
-const Buttons = styled.div<ContainerProps>`
-    text-decorations:none;
-    // background-image:linear-gradient(to bottom right,orange,purple,blue);
-    // background-clip:text;
-    // color:transparant;
-    font-size:3rem;
+const Buttons = styled(Link) <ContainerProps>`
+    text-decoration:none;
+    color:transparent;
+    width:10vh;
+    padding:10px;
+    text-align:center;
+    border:none;
+    font-weight:bold;
     &:hover{
-        background:(linear-gradient(to bottom right,orange,purple,blue),.3);
+        background-clip:padding-box;
+        color:white;
+        border-radius:15px;
+    }
+    ${system.space}
+    ${system.width}
+    ${system.layout}
+`
+const DropDownButton = styled.select<ContainerProps>`
+    width:auto;
+    padding:10px;
+    color:transparent;
+    text-align:center;
+    border:none;
+    font-weight:bold;
+    background-image:linear-gradient(to bottom right,orange,purple,blue);
+    background-size:200% 200%;
+    background-clip:text;
+    &:hover{
+        background-clip:padding-box;
+        color:white;
+        border-radius:15px;
+    }
+    ${system.space}
+    ${system.width}
+    ${system.layout}
+`
+const DropDownOption = styled.option<ContainerProps>`
+    text-decoration:none;
+    color:blue;
+    width:10vh;
+    padding:10px;
+    text-align:center;
+    border:none;
+    font-weight:bold;
+    &:hover{
+        background:transparent;
+        color:white;
+        border-radius:15px;
+    }
+    ${system.space}
+    ${system.width}
+    ${system.layout}
+`
+const ColorBack = styled.div`
+    background-image:linear-gradient(to bottom right,orange,purple,blue);
+    background-size:200% 200%;
+    background-clip:text;
+    &:hover{
+        background-clip:padding-box;
         color:white;
         border-radius:15px;
     }
 `
 function toolbar(props: { color?: string }) {
     return (
-        <ToolContainer mr="10vw" ml="auto">
-
+        <ToolContainer mr="10vw" ml="auto" pt="20px">
             <layouts.flex >
-                <Buttons><Link to="/" style={{ textDecoration: "inherit" }} >Home</Link></Buttons>
-                <layouts.buttons.toolbar color={props.color} width="10vw"><Link to="/resume">Resume</Link></layouts.buttons.toolbar>
-                <Link to="/projects"><layouts.buttons.toolbar color={props.color} width="10vw">Projects</layouts.buttons.toolbar></Link>
-                <Link to="/themes"><layouts.buttons.toolbar color={props.color} width="10vw">Themes</layouts.buttons.toolbar></Link>
-
-                {/* 
-                 <layouts.dropdown>
-                <option value="fruit">Under Water</option>
-                <option value="vegetable">Trippy Moon</option>
-                <option value="meat">Meat</option>
-            </layouts.dropdown>  */}
+                <ColorBack>
+                    <Buttons to="/" >Home</Buttons>
+                </ColorBack>
+                <ColorBack>
+                    <Buttons to="/resume">Resume</Buttons>
+                </ColorBack>
+                <ColorBack>
+                    <Buttons to="/projects">Projects</Buttons>
+                </ColorBack>
+                {/* <Buttons to="/themes">Themes</Buttons> */}
+                <DropDownButton>
+                    <DropDownOption value="fruit">Default Theme</DropDownOption>
+                    <DropDownOption value="vegetable">Trippy Moon</DropDownOption>
+                    <DropDownOption value="meat">Meat</DropDownOption>
+                </DropDownButton>
 
             </layouts.flex>
-
         </ToolContainer>
     )
 }

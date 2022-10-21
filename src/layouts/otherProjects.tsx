@@ -27,13 +27,13 @@ const otherProjs = (props: { name?: string }) => {
         <>
             <layouts.center><h3>Other Projects</h3></layouts.center>
 
-            <layouts.Bod m="5px" p="auto" width="90vw">
+            <layouts.Bod m="5px" p="auto" width="97vw">
                 <layouts.flex>
                     {otherProjects.map((project, key) => (
-                        <div key={key} >
+                        <layouts.DIV key={key} p="15px" width="20vw">
                             <Link to={`/project/${project.name}`}> < h2 >{project.title}</h2> </Link>
                             <p>{project.overview}</p>
-                        </div>
+                        </layouts.DIV>
                     ))}
                 </layouts.flex>
             </layouts.Bod>

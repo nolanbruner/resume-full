@@ -7,6 +7,7 @@ import * as system from "styled-system"
 import gradPhoto from "../assets/gradphoto2.jpg"
 import Projects from "./projectsPage"
 import { Outlet } from "react-router-dom";
+import Resume from "./resume"
 
 interface props extends ContainerProps {
 
@@ -20,7 +21,8 @@ const Home = () => {
                 <layouts.Splash>
                     <layouts.Sidebar width="90vw" />
                     <About color="white" />
-                    <layouts.Bod width="95vw"><Projects /></layouts.Bod>
+                    <layouts.Bod width="95vw" ><Projects isMobile={isMobile}/></layouts.Bod>
+                    <Resume  ismobile={isMobile} />
                 </layouts.Splash>
             </>
         )
@@ -28,11 +30,11 @@ const Home = () => {
     return (<>
 
         <layouts.Splash className="splash" flexDirection="column" >
-            <Toolbar></Toolbar>
+            <Toolbar ></Toolbar>
             <layouts.Bod m="auto" mr="10vw" >
                 <layouts.flex>
                     <layouts.Sidebar width="30%" />
-                    <Outlet />
+                    <Outlet/>
                 </layouts.flex>
             </layouts.Bod>
 

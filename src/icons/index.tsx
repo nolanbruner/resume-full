@@ -16,3 +16,7 @@ export { default as mongo } from "./mongo"
 
 export { default as php } from "./php"
 export { default as nodejs } from "./nodejs"
+export { default as cloud } from "./cloud"
+export { default as html } from "./html"
+export { default as css } from "./css"
+export { default as echo3D } from "./echo3D"

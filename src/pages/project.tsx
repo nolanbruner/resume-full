@@ -26,6 +26,7 @@ const Project = (props:{isMobile:boolean}) => {
     const [projectInfo, setProjectInfo] = useState({ upvotes: 0, comments: [{ username: "", text: "" }] });
     const [commentformBool, setCommentformBool] = useState(false);
     useEffect(() => {
+        window.scrollTo(0,0);
         setCommentformBool(false)
         const fetchData = async () => {
             const result = await fetch(`/api/projects/${name}`)
@@ -62,7 +63,7 @@ const Project = (props:{isMobile:boolean}) => {
         </>)
         return(<>
             <layouts.Splash>
-                <Toolbar color="navy" />
+                <Toolbar />
 
                 <layouts.Bod m=" auto" mr="10vw" >
                     <Link to ="/projects">Go Back</Link>

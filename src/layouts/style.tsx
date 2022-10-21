@@ -11,7 +11,7 @@ const Bod = styled.div<ContainerProps>`
     background-color:rgba(255,255,255,0.9);
     border-radius:10px 0px 10px 10px;
     padding:10px;
-	box-shadow: 0px 20px 10px rgba(0, 0, 0, .9);
+	box-shadow: 0px 20px 10px rgba(0, 0, 0, .5);
     ${system.space}
     ${system.width}
     ${system.layout}
@@ -31,14 +31,27 @@ const bubble = styled.div<ContainerProps>`
 `
 const center = styled.div`
     text-align:center;
+    ${system.width}
+    ${system.layout}
 `
 const flex = styled.div<FlexProps>`
     display:flex;
     vertical-align:center;
     ${system.space}
+    ${system.width}
+    ${system.layout}
+`
+const DIV = styled.div<ContainerProps>`
+    display:comumn;
+    vertical-align:center;
+    ${system.space}
+    ${system.width}
+    ${system.layout}
 `
 export const grid = styled.div<system.FlexboxProps & ContainerProps>`
     ${system.space}    
+    ${system.layout}
+    ${system.width}
     ${system.layout}
 `
 const dropdown = styled.select`
@@ -67,6 +80,7 @@ const statement = styled.div<ContainerProps>`
     margin:10px;
     ${system.fontWeight}
     ${system.fontSize}
+    ${system.color}
     ${system.fontStyle}
     ${system.space}
  `
@@ -97,4 +111,4 @@ export const span = styled.span<SpanProps>`
 `
 
 
-export { statement, expression, dropdown, DropdownItem, flex, Bod, center, bubble }
+export { statement, expression, dropdown, DropdownItem, flex, Bod, center, bubble,DIV }

@@ -10,6 +10,7 @@ const Background = styled.div<ContainerProps>`
    background-image: linear-gradient(to bottom right,orange,purple,blue);
 	// opacity:.9;
 	background-size: 150% 150%;  
+	
 	animation: background 10s infinite alternate;
 	@keyframes background{
 		0%{background-position:top left}
@@ -44,7 +45,7 @@ export function Splash(props: React.PropsWithChildren<{ className?: string } & c
 	} = props
 
 	return (<>
-		<Background zIndex="-3" width="100%" height="100%">{children}</Background>
+		<Background zIndex="-3" width="100%" pt="5vh" pb="5vh"height="100%">{children}</Background>
 		{/* <Background2 zIndex="-2" width="100%" height="100%"><icons.circles.circle4 height="100vh" width="100vw" ></icons.circles.circle4></Background2> */}
 		{/* <containers.absolute m="auto"> {children}</containers.absolute> */}
 

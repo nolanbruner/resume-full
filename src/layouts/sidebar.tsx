@@ -25,13 +25,13 @@ const Side = styled.div<system.LayoutProps>`
     ${system.width}
 `
 const ResumeButton = styled.button<ContainerProps>`
-    background-image: linear-gradient(to bottom right,orange,purple,blue);
-    background-size:400% 400%;
+    background-image: linear-gradient(to bottom right,lightblue,blue,lightblue);
+    background-size:200% 200%;
     font-size:20px;
     color:white;
     border-radius:20px;
     padding:20px;
-	animation: background 5s infinite alternate;
+	animation: background 4s infinite alternate;
 	@keyframes background{
 		0%{background-position:middle}
 		100%{background-position:bottom right}
@@ -39,9 +39,9 @@ const ResumeButton = styled.button<ContainerProps>`
     ${system.width}
 `
 const Hyperlink = styled.a`
-    text-decorations:none;
+    text-decoration:none;
     color:black;
-    &:onHover{
+    &:hover{
         color:blue;
     }
 `
