@@ -5,8 +5,7 @@ import * as system from "styled-system"
 import styled from "@emotion/styled"
 import { ContainerProps } from "./style"
 const ToolContainer = styled.div<ContainerProps>`
-    width: 33vw;
-    padding:20px;
+    width: 30vw;
     background-color:white;
     border-radius:45px 10px 0px 0px;
     padding:10px;
@@ -20,12 +19,12 @@ const Buttons = styled(Link) <ContainerProps>`
     text-decoration:none;
     color:transparent;
     width:10vh;
-    padding:10px;
+    padding:25px;
     text-align:center;
     border:none;
+    background-position:center;
     font-weight:bold;
     &:hover{
-        background-clip:padding-box;
         color:white;
         border-radius:15px;
     }
@@ -35,11 +34,11 @@ const Buttons = styled(Link) <ContainerProps>`
 `
 const DropDownButton = styled.select<ContainerProps>`
     width:auto;
-    padding:10px;
     color:transparent;
     text-align:center;
+
     border:none;
-    font-weight:bold;
+    font-weight:800;
     background-image:linear-gradient(to bottom right,orange,purple,blue);
     background-size:200% 200%;
     background-clip:text;
@@ -54,14 +53,14 @@ const DropDownButton = styled.select<ContainerProps>`
 `
 const DropDownOption = styled.option<ContainerProps>`
     text-decoration:none;
-    color:blue;
+    background-image:linear-gradient(to bottom right,orange,purple,blue);
+
     width:10vh;
-    padding:10px;
     text-align:center;
     border:none;
     font-weight:bold;
     &:hover{
-        background:transparent;
+        background-image:linear-gradient(to bottom right,orange,purple,blue);
         color:white;
         border-radius:15px;
     }
@@ -73,6 +72,7 @@ const ColorBack = styled.div`
     background-image:linear-gradient(to bottom right,orange,purple,blue);
     background-size:200% 200%;
     background-clip:text;
+    background-position:middle;
     &:hover{
         background-clip:padding-box;
         color:white;
@@ -81,8 +81,8 @@ const ColorBack = styled.div`
 `
 function toolbar(props: { color?: string }) {
     return (
-        <ToolContainer mr="10vw" ml="auto" pt="20px">
-            <layouts.flex >
+        <ToolContainer mr="10vw" ml="auto">
+            <layouts.flex p="5px">
                 <ColorBack>
                     <Buttons to="/" >Home</Buttons>
                 </ColorBack>
@@ -92,12 +92,14 @@ function toolbar(props: { color?: string }) {
                 <ColorBack>
                     <Buttons to="/projects">Projects</Buttons>
                 </ColorBack>
-                {/* <Buttons to="/themes">Themes</Buttons> */}
-                <DropDownButton>
+                {/* <ColorBack>
+                    <Buttons to="/themes">Themes</Buttons>
+                </ColorBack> */}
+                {/* <DropDownButton p="5px">
                     <DropDownOption value="fruit">Default Theme</DropDownOption>
                     <DropDownOption value="vegetable">Trippy Moon</DropDownOption>
                     <DropDownOption value="meat">Meat</DropDownOption>
-                </DropDownButton>
+                </DropDownButton> */}
 
             </layouts.flex>
         </ToolContainer>

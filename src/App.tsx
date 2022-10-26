@@ -13,16 +13,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} >
-          <Route index element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={< ProjectsPage />} />
+          <Route index element={<About color={""} />} />
+          <Route path="/resume" element={<Resume ismobile={false} />} />
+          <Route path="/projects" element={< ProjectsPage isMobile={false} />} />
 
           <Route path="/themes" element={<Themes />} />
 
           <Route element={<NotFoundPage />} />
 
         </Route>
-        <Route path="/project/:name" element={< Project />} />
+        <Route path="/project/:name" element={< Project isMobile={false} />} />
       </Routes>
     </BrowserRouter >
   );

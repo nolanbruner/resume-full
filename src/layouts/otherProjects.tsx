@@ -6,7 +6,7 @@ const otherProjs = (props: { name?: string }) => {
     const otherProjects = projectList.filter(project => project.name !== props.name);
     if (window.innerWidth <= 500) return (
         <>
-            <layouts.center><h3>Other Projects</h3></layouts.center>
+            <layouts.center><h3 style={{color:"white"}}>Other Projects</h3></layouts.center>
 
             <layouts.Bod m="0px" p="auto" width="auto">
             <layouts.grid>
@@ -25,7 +25,7 @@ const otherProjs = (props: { name?: string }) => {
     return (
 
         <>
-            <layouts.center><h3>Other Projects</h3></layouts.center>
+            <layouts.center><h3 style={{color:"white"}}>Other Projects</h3></layouts.center>
 
             <layouts.Bod m="5px" p="auto" width="97vw">
                 <layouts.flex>

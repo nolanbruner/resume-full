@@ -30,6 +30,7 @@ const primary = styled.button<ContainerProps>`
     opacity:.8;
     &:hover{
         background:lightblue;
+        color:black;
     }
     ${system.fontWeight}
     ${system.fontSize}

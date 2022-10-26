@@ -56,11 +56,11 @@ const Sidebar = (props: { width: string }) => {
             </layouts.center>
             <layouts.expression>Get connected</layouts.expression>
             <layouts.center ><a href="https://github.com/nolanbruner/" ><icons.github height="30px" width="30px" /></a><a href="https://linkedin.com/in/nolanbruner"><icons.linkedin height="30px" width="30px" /></a><a href="https://facebook.com/nolan.bruner/"><icons.facebook height="30px" width="30px" /></a></layouts.center>
-            <layouts.flex p="5px"><Hyperlink href="mailto:nbruner056@gmail.com" ><icons.mail width="20px" height="20px" />nbruner056@gmail.com</Hyperlink></layouts.flex>
-            <layouts.flex p="5px"><Hyperlink href="tel:5026813983"><icons.phone width="20px" height="20px" />502-681-3983 </Hyperlink></layouts.flex>
-            <layouts.flex p="5px"><icons.calander width="20px" height="20px" />September 22,1999</layouts.flex>
-            <layouts.flex p="5px"><icons.pin width="20px" height="20px" />Louisville, KY</layouts.flex>
-            <layouts.center><ResumeButton onClick={() => download()}>Download Resume</ResumeButton></layouts.center>
+            <Hyperlink href="mailto:nbruner056@gmail.com" > <layouts.flex p="5px" ><icons.mail width="20px" height="20px" /><layouts.DIV pl="4px"> nbruner056@gmail.com</layouts.DIV></layouts.flex></Hyperlink>
+            <Hyperlink href="tel:5026813983"> <layouts.flex p="5px"><icons.phone width="20px" height="20px" /><layouts.DIV pl="4px">502-681-3983 </layouts.DIV></layouts.flex></Hyperlink>
+            <layouts.flex p="5px"><icons.calander width="20px" height="20px" /><layouts.DIV pl="4px">September 22,1999</layouts.DIV></layouts.flex>
+            <layouts.flex p="5px"><icons.pin width="20px" height="20px" /><layouts.DIV pl="4px">Louisville, KY</layouts.DIV></layouts.flex>
+            <layouts.center><ResumeButton onClick={() => download()}> Download Resume</ResumeButton></layouts.center>
 
         </Side>
     )

@@ -26,7 +26,6 @@ const about = (props:{color:string}) => {
                     <icons.reacticon width="150px" height="150px" />
                     <icons.nodejs width="150px" height="150px"  p="10px"/>
                     <icons.html width="150px" height="150px" />
-                    <icons.echo3D width="150px" height="150px" />
 
                 </layouts.grid>
 

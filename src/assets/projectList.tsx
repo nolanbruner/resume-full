@@ -4,7 +4,7 @@ const projectList=[
         name:"vi",
         title:"Virtual Influencer Interface",
         overview:"Created a UI for a AI tool for generating virtual models.",
-        tech:["This tool was created so our marketing team could use a Virtual model rendering tool developed by our AI pod. My responsibilities included learning ReactJS, creating reusable components, building out pages, and hande state routing. Initially I had to learn ReactJS which was different from traditional html. Initially I built out all 9 pages with html and css but these websites did not have much more functionality than the figma designs I was modeling. A couple weeks later a principle engineer joined our team, and he worked with me twice a week for 4 months to create a full scale application. Once I had all of the pages built out I realized there were some flow issues with the design, so I worked with other engineers to come up with a clearer flow. I also realized that the rendering was not perfect and the products would need to be placed manually, so I installed a package called InteractJS, which allowed me to create a tool for dragging and scaling the influencer images and product images onto a background.   "],
+        tech:["This tool was created so the marketing team could use a Virtual model rendering tool developed by our AI pod. My responsibilities included creating reusable components, building out pages that matched a figma design, create mock api's, and hande state routing. Initially I had to learn ReactJS which was different from traditional html. I taught myself the basics and met with my advisor weekely to learn best practices as well as the fundamentals of ReactJS.","He taught me to not code by coincidence, and to understand what every line of code did. These meetings were helpful but at times they were limited to his schedule. After I would complete each page, I would commit to my branch, make a merge request, and get a peer review to ensure my branch could be merged.", "The application itself had 5 pages: select an influencer, select a background, upload product, current processes that were rendering in the back-end, and finally drag and scale to place the product. Initially, I built 3 mock api's and simplified them into one by nesting objects in JSON. Used link-state routing to create a new JSON object that would be saved for future use. Finally used a package named interactJS to create the drag and scale page, where the user could download the finished image.  "],
         icons:[icons.reacticon],
     
     },
@@ -12,7 +12,7 @@ const projectList=[
         name:"trends",
         title:"Sales Visualization",
         overview:"For my intern program we were tasked with creating a new product line for one of our brands",
-        tech:["I didn't have anything assigned to me for this project because all of the tech assignments were geared to the AI interns, so it was up to me to find a way to help. One of the assignments was to find product segmentation in the historical data in our sales from the past 2 years. There were not too many useful attributes in this data set because it was coming from many locations. I chose to look at two data sets: sales, and ad data. I decided I couldn't use ad data because I didn't know if the geographic placements of these ads were uniform so I had no way of normalizing the data. I ended up joining two tables: sales by user and sales addresses. From here I got a decent idea where our customers were coming from and decided to use ChartJS and topoJSON to create a choropleth map of our geographic sales  "],
+        tech:["Each branch of the company came up with categories and ideas to help with the final sales pitch, that was given at the end of our internship. These categories were relative to our role as interns. These ideas consisted of customer segmentation, sales forecasting, trend analysis, and brand promotions, ","I chose to research customer segmentation because I felt it was most important to our pitch. I began to analytics on the sales sheet in our data warehouse, and I found that most of our customers were located in a single state. In an attempt to visualize this information, I decided to make a tool that would display a geographic chloropeth map of our sales information. To do this I created a react app with two packages, ChartJS and topoJSON, that allowed the user to see how many sales were made in a given country or state. ", "With this information, we were able to find which areas of the world to target our ads and optimize the click-to-ad ratio. "],
         icons:[icons.cloud],
 
     },
@@ -20,7 +20,7 @@ const projectList=[
         name:"cafe",
         title:"Cafe Munshn Lunshn ",
         overview:"This project was the basis of my Web Programming class at the University of Kentucky",
-        tech:["Throughout the year we were tasked with updating this web page with new features, and new designs. Some of these features: sql-request of menu items and descriptions, JQuery to count how many requests, JSON responses, animations, error handeling  "],
+        tech:["Throughout the year we were tasked with updating this mock cafe page with new features, and new designs. Some of these features: sql-request of menu items and descriptions, JQuery to count how many requests, JSON responses, animations, and error handeling.","Although html itself isn't a popular way to write web applications, I believe it is fundamental to learn where web frameworks  such as React and Angular came from, and how they differ from tradional html, and many of the ideas carry over to these newer frameworks"],
         icons:[icons.html,icons.php,icons.css],
 
     },
@@ -28,14 +28,14 @@ const projectList=[
         name:"willitfit",
         title:"WillItFit",
         overview:"I created this project for a hackathon hosted by the University of Kentucky. ",
-        tech:["The insiration from this project came from working at an e-commerce company. There were many prize categories, but I decided go with the 'best use for VR. I realized that e-commerce is a fastly growing industry, but it has limitations that show rooms do not. If I wanted to decorate a room traditionaly I would go to the store, find products that matched, and would be able to infer how these items would look in my room. I decided to embed software from one of our sponsers,Echo3D, to create an ecommerce page where users could place the pieces of furniture in the room. The embedded software had its limitations that I was unable to resole. The biggest issue was the objects were blown up to 100%, so literally the objects spaned the whole room."," This gave the appearence that the object was not visible, as the camera was inside the object. "],
-        icons:[icons.html,icons.css,icons.echo3D],
+        tech:["The insiration from this project came from working at an e-commerce company. There were many prize categories, but I decided go with the 'best use for VR. I realized that e-commerce is a fastly growing industry, but it has limitations that show rooms do not. If I wanted to decorate a room traditionaly I would go to the store, find products that matched, and would be able to infer how these items would look in my room."," I decided to embed software from one of our sponsers, Echo3D , to create an ecommerce page that listed all of its products in a catelog, and the user could place each item in his/her cart around the room. I developed a prototype for this idea but it had its limitations that I was unable to resole. "],
+        icons:[icons.html,icons.css],
     },
     {
         name:"carekit",
         title:"Apple's Care Kit",
         overview:"This health app was the basis of my App development course using Apple's open source Care Kit ",
-        tech:["This was a full-stack application that used a MVVM style for development. We were given a sample app with basic functionality, and we were prompted to add features such as: login view and water consumption as assignments. For our final we were taked with adding features and views to our app","I decided to add notification functionality that reminded you to drink water in at a set time interval, a view to manage notifications, and a view to log emotions"],
+        tech:["This was a full-stack application that used a MVVM style for development. We were given an open source sample app from apple that had standard features for a maturnal app, such as medication tracker, nasusa log, and a contact view for contacting various providers. We were prompted to add features such as: login view and water consumption as assignments throughout the year. For our final project we were taked with adding two features of our own.","I decided to add notification functionality that reminded you to drink water in at a set time interval, a view to manage notifications, and a view to log emotions"],
         icons:[icons.swift],
     },
 ]
