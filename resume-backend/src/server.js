@@ -1,8 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from "path";
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
-
+app.use(express.static(path.join(__dirname, "/build")));
 app.use(bodyParser.json());
 
 const uri = "mongodb+srv://nolanb:Bookout111@cluster0.rb1ibnf.mongodb.net/?retryWrites=true&w=majority";
@@ -52,5 +53,7 @@ app.post('/api/projects/:name/add-comment', (req, res) => {
     }, res);
 
 });
-
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/build/index.html"));
+})
 app.listen(8000, () => console.log('Listening on port 8000'));
