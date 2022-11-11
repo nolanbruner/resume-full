@@ -52,7 +52,7 @@ const Sidebar = (props: { width: string }) => {
             <layouts.center>
                 <Image src={gradPhoto} alt="Profile Picture" />
                 <h3>Nolan Bruner</h3>
-                <Role>Full-Stack Developer</Role>
+                <Role>Front-End Developer</Role>
             </layouts.center>
             <layouts.expression>Get connected</layouts.expression>
             <layouts.center ><a href="https://github.com/nolanbruner/" ><icons.github height="30px" width="30px" /></a><a href="https://linkedin.com/in/nolanbruner"><icons.linkedin height="30px" width="30px" /></a><a href="https://facebook.com/nolan.bruner/"><icons.facebook height="30px" width="30px" /></a></layouts.center>

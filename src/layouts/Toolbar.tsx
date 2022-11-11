@@ -5,7 +5,7 @@ import * as system from "styled-system"
 import styled from "@emotion/styled"
 import { ContainerProps } from "./style"
 const ToolContainer = styled.div<ContainerProps>`
-    width: 30vw;
+    width: 35vw;
     background-color:white;
     border-radius:45px 10px 0px 0px;
     padding:10px;
@@ -31,43 +31,43 @@ const Buttons = styled(Link) <ContainerProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
-`
-const DropDownButton = styled.select<ContainerProps>`
-    width:auto;
-    color:transparent;
-    text-align:center;
+// `
+// const DropDownButton = styled.select<ContainerProps>`
+//     width:auto;
+//     color:transparent;
+//     text-align:center;
 
-    border:none;
-    font-weight:800;
-    background-image:linear-gradient(to bottom right,orange,purple,blue);
-    background-size:200% 200%;
-    background-clip:text;
-    &:hover{
-        background-clip:padding-box;
-        color:white;
-        border-radius:15px;
-    }
-    ${system.space}
-    ${system.width}
-    ${system.layout}
-`
-const DropDownOption = styled.option<ContainerProps>`
-    text-decoration:none;
-    background-image:linear-gradient(to bottom right,orange,purple,blue);
+//     border:none;
+//     font-weight:800;
+//     background-image:linear-gradient(to bottom right,orange,purple,blue);
+//     background-size:200% 200%;
+//     background-clip:text;
+//     &:hover{
+//         background-clip:padding-box;
+//         color:white;
+//         border-radius:15px;
+//     }
+//     ${system.space}
+//     ${system.width}
+//     ${system.layout}
+// `
+// const DropDownOption = styled.option<ContainerProps>`
+//     text-decoration:none;
+//     background-image:linear-gradient(to bottom right,orange,purple,blue);
 
-    width:10vh;
-    text-align:center;
-    border:none;
-    font-weight:bold;
-    &:hover{
-        background-image:linear-gradient(to bottom right,orange,purple,blue);
-        color:white;
-        border-radius:15px;
-    }
-    ${system.space}
-    ${system.width}
-    ${system.layout}
-`
+//     width:10vh;
+//     text-align:center;
+//     border:none;
+//     font-weight:bold;
+//     &:hover{
+//         background-image:linear-gradient(to bottom right,orange,purple,blue);
+//         color:white;
+//         border-radius:15px;
+//     }
+//     ${system.space}
+//     ${system.width}
+//     ${system.layout}
+// `
 const ColorBack = styled.div`
     background-image:linear-gradient(to bottom right,orange,purple,blue);
     background-size:200% 200%;

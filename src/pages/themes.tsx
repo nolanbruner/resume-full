@@ -1,11 +1,9 @@
 import React from "react";
 import Toolbar from "../layouts/Toolbar";
 import styled from "@emotion/styled"
-import { background, color, LayoutProps } from "styled-system"
+import { background, color} from "styled-system"
 
-const DropdownItem = styled.option`
-    background:blue;
-`
+
 interface backgroundProps {
     background?: string,
     height?: string,
@@ -32,9 +30,9 @@ const trippyMoon = {
 }
 const Themes = () => {
     const [theme, setTheme] = React.useState(underWater as themed);
-    const handleChange = (event: any) => {
-        setTheme(event.target.value);
-    };
+    // const handleChange = (event: any) => {
+    //     setTheme(event.target.value);
+    // };
     console.log(theme)
 
 

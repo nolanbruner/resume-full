@@ -1,9 +1,6 @@
 
-import { opacity } from "styled-system"
-import * as layouts from "."
-import gradphoto from "../assets/gradphoto2.jpg"
-import styled from "@emotion/styled";
-import * as system from "styled-system"
+import * as layouts from "./"
+
 import * as icons from "../icons"
 const about = (props:{color:string}) => {
     return (

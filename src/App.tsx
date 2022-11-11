@@ -1,4 +1,3 @@
-import * as layouts from "./layouts"
 import { default as Home } from "./pages/Home"
 import { default as Resume } from "./pages/resume"
 import { default as Project } from "./pages/project"

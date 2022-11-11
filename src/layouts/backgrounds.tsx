@@ -2,8 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import * as system from "styled-system"
 import * as containers from "./style"
-import * as icons from "../icons"
-import * as layouts from "../layouts"
 import { ContainerProps } from "./style"
 
 const Background = styled.div<ContainerProps>`
@@ -24,24 +22,23 @@ const Background = styled.div<ContainerProps>`
 
 
 
-const Background2 = styled.div<ContainerProps>`
-	position: absolute;
-	// animation: mySecond 7s linear 8s infinite ;
-	opacity:.3;
-	background:black;
-	mix-blend-mode: overlay;
-	// z-index:-1;
-	// 	@keyframes mySecond {
-	// 	0%   {}
-	// 	100% {transform:rotate(360deg)}
-	//   }
-	//   ${system.zIndex}
-`
+// const Background2 = styled.div<ContainerProps>`
+// 	position: absolute;
+// 	// animation: mySecond 7s linear 8s infinite ;
+// 	opacity:.3;
+// 	background:black;
+// 	mix-blend-mode: overlay;
+// 	// z-index:-1;
+// 	// 	@keyframes mySecond {
+// 	// 	0%   {}
+// 	// 	100% {transform:rotate(360deg)}
+// 	//   }
+// 	//   ${system.zIndex}
+// `
 
 export function Splash(props: React.PropsWithChildren<{ className?: string } & containers.ContainerProps & system.FlexProps & system.FlexDirectionProps>): JSX.Element {
 	const {
 		children,
-		...rest
 	} = props
 
 	return (<>

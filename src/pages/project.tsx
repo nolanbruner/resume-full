@@ -10,10 +10,7 @@ import CommentsList from "../layouts/commentsList"
 import AddCommentForm from "../layouts/addComment"
 import { ContainerProps } from "../layouts/style"
 import * as system from "styled-system"
-const Pic = styled.img`
-    border-radius: 50px;
-    border:2px solid black;
-`
+
 const ProjectBlock = styled.div<ContainerProps>`
     font-size:20px;
    ${system.space}
@@ -51,11 +48,11 @@ const Project = (props:{isMobile:boolean}) => {
                         ))}
 
                     </ProjectBlock>
-                    <CommentsList comments={projectInfo.comments} />
+                    {/* <CommentsList comments={projectInfo.comments} />
                     <layouts.buttons.primary onClick={() => setCommentformBool(true)}>Add comment</layouts.buttons.primary>
                     {commentformBool ?
                         <AddCommentForm projectName={name} setprojectInfo={setProjectInfo} /> : <></>
-                    }
+                    } */}
                 </layouts.Bod>
 
                 <layouts.otherProjs name={name} />
@@ -75,11 +72,11 @@ const Project = (props:{isMobile:boolean}) => {
                         ))}
 
                     </ProjectBlock>
-                    <CommentsList comments={projectInfo.comments} />
+                    {/* <CommentsList comments={projectInfo.comments} />
                     <layouts.buttons.primary fontSize="20px" fontWeight="bold" p="10px" onClick={() => setCommentformBool(true)}>Add comment</layouts.buttons.primary>
                     {commentformBool ?
                         <AddCommentForm projectName={name} setprojectInfo={setProjectInfo} /> : <></>
-                    }
+                    } */}
                 </layouts.Bod>
 
                 <layouts.otherProjs name={name} />

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as Icons from "../icons/reacticon"
 const Foot = styled.div`
     background:blue; 
     color:white;
