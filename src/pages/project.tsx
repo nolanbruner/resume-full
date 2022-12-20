@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+// import React, { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 
 import projectList from "../assets/projectList"
@@ -6,8 +6,8 @@ import styled from "styled-components"
 import * as layouts from "../layouts"
 import NotFoundPage from "./NotFoundPage"
 import Toolbar from "../layouts/Toolbar"
-import CommentsList from "../layouts/commentsList"
-import AddCommentForm from "../layouts/addComment"
+// import CommentsList from "../layouts/commentsList"
+// import AddCommentForm from "../layouts/addComment"
 import { ContainerProps } from "../layouts/style"
 import * as system from "styled-system"
 
@@ -20,20 +20,20 @@ const ProjectBlock = styled.div<ContainerProps>`
 const Project = (props:{isMobile:boolean}) => {
     const { name } = useParams()
     const project = projectList.find(project => project.name === name);
-    const [projectInfo, setProjectInfo] = useState({ upvotes: 0, comments: [{ username: "", text: "" }] });
-    const [commentformBool, setCommentformBool] = useState(false);
-    useEffect(() => {
-        window.scrollTo(0,0);
-        setCommentformBool(false)
-        const fetchData = async () => {
-            const result = await fetch(`/api/projects/${name}`)
-            const body = await result.json();
-            console.log(body);
-            setProjectInfo(body);
-        }
-        fetchData();
+    // const [projectInfo, setProjectInfo] = useState({ upvotes: 0, comments: [{ username: "", text: "" }] });
+    // const [commentformBool, setCommentformBool] = useState(false);
+    // useEffect(() => {
+    //     window.scrollTo(0,0);
+    //     // setCommentformBool(false)
+    //     const fetchData = async () => {
+    //         const result = await fetch(`/.functions/get_projects/?name=${name}`)
+    //         const body = await result.json();
+    //         console.log(body);
+    //         setProjectInfo(body);
+    //     }
+    //     fetchData();
 
-    }, [name]);
+    // }, [name]);
     if (!project) return <NotFoundPage />
     if(window.innerWidth<=500) return (
         <>
@@ -46,13 +46,14 @@ const Project = (props:{isMobile:boolean}) => {
                         {project.tech.map((part, key) => (
                             <p key={key}>{part}</p>
                         ))}
-
+                  
                     </ProjectBlock>
+                    <a href="https://comforting-gnome-8841d2.netlify.app/"> Click Here to see in action</a>
                     {/* <CommentsList comments={projectInfo.comments} />
                     <layouts.buttons.primary onClick={() => setCommentformBool(true)}>Add comment</layouts.buttons.primary>
                     {commentformBool ?
-                        <AddCommentForm projectName={name} setprojectInfo={setProjectInfo} /> : <></>
-                    } */}
+                        <AddCommentForm projectName={name} setprojectInfo={setProjectInfo} /> : <></> */}
+                    {/* } */}
                 </layouts.Bod>
 
                 <layouts.otherProjs name={name} />
@@ -70,7 +71,8 @@ const Project = (props:{isMobile:boolean}) => {
                         {project.tech.map((part, key) => (
                             <p key={key}>{part}</p>
                         ))}
-
+                    {(project.link!=="")?<a href={project.link}> Click Here to see in action</a>:<></>
+                    }
                     </ProjectBlock>
                     {/* <CommentsList comments={projectInfo.comments} />
                     <layouts.buttons.primary fontSize="20px" fontWeight="bold" p="10px" onClick={() => setCommentformBool(true)}>Add comment</layouts.buttons.primary>
