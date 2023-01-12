@@ -82,7 +82,7 @@ const ColorBack = styled.div`
 function toolbar(props: { color?: string }) {
     return (
         <ToolContainer mr="10vw" ml="auto">
-            <layouts.flex p="5px">
+            <layouts.flex p="1x">
                 <ColorBack>
                     <Buttons to="/" >Home</Buttons>
                 </ColorBack>

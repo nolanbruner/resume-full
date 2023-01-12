@@ -20,3 +20,8 @@ export { default as cloud } from "./cloud"
 export { default as html } from "./html"
 export { default as css } from "./css"
 export { default as echo3D } from "./echo3D"
+
+export {default as gitlab} from "./gitlab"
+export {default as mysql} from "./mysql"
+export {default as python} from "./python"
+export {default as styled} from "./styled"

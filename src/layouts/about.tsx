@@ -2,30 +2,39 @@
 import * as layouts from "./"
 
 import * as icons from "../icons"
-const about = (props:{color:string}) => {
+const about = (props: { color: string }) => {
     return (
 
         <layouts.DIV width="90%" ml="3vw">
             <layouts.statement p="10px" color={props.color} fontWeight="" fontSize="25px" >
                 <h3 >About Me</h3>
-                <div>I am a recent graduate of the University of Kentucky where I achieved a B.S. in Computer Science, and minors in Philosophy and Mathmatics.
-                    My development experience includes, but is not limited to, creating applications with react, java, and swift. I am currently residing in Louisville, Kentucky and open to relocate.
+                <div>I am a recent graduate of the University of Kentucky where I achieved a B.S. in Computer Science, and minors in Philosophy and Mathmatics. I am currently residing in Louisville, Kentucky and open to relocate.
                 </div>
-                <h4>Software experience</h4>
             </layouts.statement>
-                <layouts.grid width="100%" p="20px">
-                    <icons.swift width="150px" height="150px" p="10px" />
-                    <icons.js width="150px" height="150px"  p="10px"/>
-                    <icons.java width="150px" height="150px" p="10px" />
-                    <icons.jira   color={props.color} width="150px" height="150px"  p="10px"/>
-                    <icons.mongo width="150px" height="150px"  p="10px"/>
-                    <icons.php width="150px" height="150px"  p="10px"/>
-                    <icons.reacticon width="150px" height="150px" />
-                    <icons.nodejs width="150px" height="150px"  p="10px"/>
-                    <icons.html width="150px" height="150px" />
-
-                </layouts.grid>
-
+            <layouts.statement>
+            Currently Working with
+            </layouts.statement>
+            <layouts.grid width="100%" >
+                <icons.js width="100px" p="10px" />
+                <icons.mongo width="100px" p="10px" />
+                <icons.reacticon width="100px" height="100px" />
+                <icons.nodejs width="100px" height="100px" p="10px" />
+                <icons.html width="100px" p="10px" />
+                <a href="https://github.com/"><icons.github width="100px" p="10px" /></a>
+                <icons.styled  width="100px" p="10px" />
+            </layouts.grid>
+            <layouts.statement>
+            Previously Used
+            </layouts.statement>
+            <layouts.grid>
+                <icons.swift width="100px" p="10px" />
+                <icons.java width="100px" p="10px" />
+                <icons.php width="100px" p="10px" />
+                <icons.gitlab width="100px" p="10px" />
+                <icons.jira color={props.color} height="100px" p="10px" />
+                <icons.python width="100px" p="10px" />
+                <icons.mysql width="100px" p="10px" />
+            </layouts.grid>
         </layouts.DIV>
 
     )

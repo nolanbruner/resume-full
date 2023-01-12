@@ -12,7 +12,7 @@ const php = (props: svg.SVGProps) => {
 
     } = props
     return (
-        <a href="https://en.wikipedia.org/wiki/PHP">
+        <a href="https://www.php.net/">
             <svg.SVG className={className} p="5px" width={props.width} height={props.height} viewBox="0 -60.5 256 256" xmlns="http://www.w3.org/2000/svg" {...rest}>
                 <g>
                     <ellipse fill="url(#radialGradient-1)" cx="128" cy="67.3" rx="128" ry="67.3" />

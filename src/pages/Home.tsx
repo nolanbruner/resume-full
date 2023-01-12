@@ -32,7 +32,8 @@ const Home = () => {
             </layouts.Bod>
 
         </layouts.Splash>
-    </>
+        {/* <layouts.footer /> */}
+            </>
     )
 
 }

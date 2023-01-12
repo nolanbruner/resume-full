@@ -54,13 +54,13 @@ const Sidebar = (props: { width: string }) => {
                 <h3>Nolan Bruner</h3>
                 <Role>Front-End Developer</Role>
             </layouts.center>
-            <layouts.expression>Get connected</layouts.expression>
+            <layouts.statement>Get connected</layouts.statement>
             <layouts.center ><a href="https://github.com/nolanbruner/" ><icons.github height="30px" width="30px" /></a><a href="https://linkedin.com/in/nolanbruner"><icons.linkedin height="30px" width="30px" /></a><a href="https://facebook.com/nolan.bruner/"><icons.facebook height="30px" width="30px" /></a></layouts.center>
             <Hyperlink href="mailto:nbruner056@gmail.com" > <layouts.flex p="5px" ><icons.mail width="20px" height="20px" /><layouts.DIV pl="4px"> nbruner056@gmail.com</layouts.DIV></layouts.flex></Hyperlink>
             <Hyperlink href="tel:5026813983"> <layouts.flex p="5px"><icons.phone width="20px" height="20px" /><layouts.DIV pl="4px">502-681-3983 </layouts.DIV></layouts.flex></Hyperlink>
             <layouts.flex p="5px"><icons.calander width="20px" height="20px" /><layouts.DIV pl="4px">September 22,1999</layouts.DIV></layouts.flex>
             <layouts.flex p="5px"><icons.pin width="20px" height="20px" /><layouts.DIV pl="4px">Louisville, KY</layouts.DIV></layouts.flex>
-            <layouts.center><ResumeButton onClick={() => download()}> Download Resume</ResumeButton></layouts.center>
+            <layouts.center p="25px"><ResumeButton onClick={() => download()}> Download Resume</ResumeButton></layouts.center>
 
         </Side>
     )

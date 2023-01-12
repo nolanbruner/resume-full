@@ -8,10 +8,10 @@ export interface FlexProps extends ContainerProps, system.FlexProps, system.Flex
 const Bod = styled.div<ContainerProps>`
     width:80vw;
     // color: rgba(0,0,0,0.7);
-    background-color:rgba(255,255,255,0.9);
+    background-color:rgba(255,255,255,0.85);
     border-radius:10px 0px 10px 10px;
     padding:10px;
-	box-shadow: 0px 20px 10px rgba(0, 0, 0, .5);
+	box-shadow: 0px 20px 10px rgba(0, 0, 0, .9);
     ${system.space}
     ${system.width}
     ${system.layout}
@@ -29,8 +29,9 @@ const bubble = styled.div<ContainerProps>`
     ${system.layout}
     ${system.backgroundImage}
 `
-const center = styled.div`
+const center = styled.div<ContainerProps>`
     text-align:center;
+    ${system.space}
     ${system.width}
     ${system.layout}
 `
@@ -77,6 +78,7 @@ const DropdownItem = styled.option`
 `
 const statement = styled.div<ContainerProps>`
     font-family:helvetica;
+    font-size:20px;
     margin:10px;
     ${system.fontWeight}
     ${system.fontSize}

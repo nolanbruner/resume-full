@@ -12,7 +12,7 @@ const java = (props: svg.SVGProps) => {
 
 	} = props
 	return (
-		<a href="https://en.wikipedia.org/wiki/Java_(programming_language)">
+		<a href="https://www.java.com/en/">
 			<svg.SVG className={className} p="5px" width={props.width} height={props.height} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" {...rest}>
 				<path fill="#FEE187" d="M246.24,97.489c-22.96,14.785-48.981,31.544-62.929,59.266
 	c-24.218,48.371,49.562,101.133,52.713,103.353c0.731,0.524,1.615,0.78,2.483,0.78c0.931,0,1.861-0.292,2.617-0.875

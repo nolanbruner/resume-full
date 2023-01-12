@@ -12,7 +12,7 @@ const swift = (props: svg.SVGProps) => {
 
     } = props
     return (
-        <a href="https://en.wikipedia.org/wiki/Swift_(programming_language)"><svg.SVG className={className} width={props.width} height={props.height} viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" {...rest}>
+        <a href="https://developer.apple.com/swift/"><svg.SVG className={className} width={props.width} height={props.height} viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" {...rest}>
             <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1845.5007" y1="1255.6392" x2="-1797.1339" y2="981.3379" gradientTransform="matrix(-1 0 0 -1 -1693.2107 1246.5044)">
                 <stop offset="0" stopColor="#FAAE42" />
                 <stop offset="1" stopColor="#EF3E31" />
