@@ -8,7 +8,7 @@ const ToolContainer = styled.div<ContainerProps>`
     width: 35vw;
     background-color:white;
     border-radius:45px 10px 0px 0px;
-    padding:10px;
+    padding:15px;
     opacity:.8;
     ${system.space}
     ${system.width}
@@ -31,7 +31,7 @@ const Buttons = styled(Link) <ContainerProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
-// `
+`
 // const DropDownButton = styled.select<ContainerProps>`
 //     width:auto;
 //     color:transparent;
@@ -73,6 +73,7 @@ const ColorBack = styled.div`
     background-size:200% 200%;
     background-clip:text;
     background-position:middle;
+    padding:5px;
     &:hover{
         background-clip:padding-box;
         color:white;
@@ -82,7 +83,7 @@ const ColorBack = styled.div`
 function toolbar(props: { color?: string }) {
     return (
         <ToolContainer mr="10vw" ml="auto">
-            <layouts.flex p="1x">
+            <layouts.flex >
                 <ColorBack>
                     <Buttons to="/" >Home</Buttons>
                 </ColorBack>

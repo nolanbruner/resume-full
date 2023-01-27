@@ -10,8 +10,13 @@ const about = (props: { color: string }) => {
                 <h3 >About Me</h3>
                 <div>I am a recent graduate of the University of Kentucky where I achieved a B.S. in Computer Science, and minors in Philosophy and Mathmatics. I am currently residing in Louisville, Kentucky and open to relocate.
                 </div>
+                {/* <layouts.DIV p="10px" pl = "35px" >Degree: B.S. in Computer Science</layouts.DIV>
+                <layouts.DIV pl = "35px" p="10px"> College: University of Kentucky </layouts.DIV>
+                <layouts.DIV pl = "35px" p="10px">Minors: Mathmatics, Philosophy</layouts.DIV>
+                <layouts.DIV pl = "35px">Activities: Hiking, Snowboarding, Golfing, Fishing</layouts.DIV> */}
+
             </layouts.statement>
-            <layouts.statement>
+            <layouts.statement fontWeight="bold">
             Currently Working with
             </layouts.statement>
             <layouts.grid width="100%" >
@@ -23,7 +28,7 @@ const about = (props: { color: string }) => {
                 <a href="https://github.com/"><icons.github width="100px" p="10px" /></a>
                 <icons.styled  width="100px" p="10px" />
             </layouts.grid>
-            <layouts.statement>
+            <layouts.statement fontWeight="bold">
             Previously Used
             </layouts.statement>
             <layouts.grid>

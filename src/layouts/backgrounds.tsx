@@ -14,7 +14,7 @@ const Background = styled.div<ContainerProps>`
 		0%{background-position:top left}
 		100%{background-position:bottom right}
 	}
-		${system.layout}
+	${system.layout}
 	${system.space}
 	${system.width}
 	`

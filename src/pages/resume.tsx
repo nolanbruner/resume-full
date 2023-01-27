@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as layouts from "../layouts"
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
-import resumePDF from "../assets/Resume_2022.pdf"
+import resumePDF from "../assets/NolanBrunerResume.pdf"
 
 export const download = () => {
     let alink = document.createElement('a');

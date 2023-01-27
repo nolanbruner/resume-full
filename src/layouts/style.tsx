@@ -77,9 +77,10 @@ const DropdownItem = styled.option`
     }
 `
 const statement = styled.div<ContainerProps>`
-    font-family:helvetica;
+    font-family:Fira Sans;
     font-size:20px;
     margin:10px;
+    ${system.fontFamily}
     ${system.fontWeight}
     ${system.fontSize}
     ${system.color}
