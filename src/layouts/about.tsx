@@ -5,8 +5,8 @@ import * as icons from "../icons"
 const about = (props: { color: string }) => {
     return (
 
-        <layouts.DIV width="90%" ml="3vw">
-            <layouts.statement p="10px" color={props.color} fontWeight="" fontSize="25px" >
+        <layouts.DIV width="90%" ml="3vw" fontFamily="sans-serif">
+            <layouts.statement p="10px" color={props.color}  fontWeight="" fontSize="25px" >
                 <h3 >About Me</h3>
                 <div>I am a recent graduate of the University of Kentucky where I achieved a B.S. in Computer Science, and minors in Philosophy and Mathmatics. I am currently residing in Louisville, Kentucky and open to relocate.
                 </div>

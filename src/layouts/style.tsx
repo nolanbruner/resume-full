@@ -77,7 +77,7 @@ const DropdownItem = styled.option`
     }
 `
 const statement = styled.div<ContainerProps>`
-    font-family:Fira Sans;
+    font-family:Josefin Sans;
     font-size:20px;
     margin:10px;
     ${system.fontFamily}
