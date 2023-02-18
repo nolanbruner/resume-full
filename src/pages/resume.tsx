@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as layouts from "../layouts"
+import * as layouts from "../components"
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 import resumePDF from "../assets/NolanBrunerResume.pdf"
 

@@ -22,7 +22,7 @@ const Buttons = styled(Link) <ContainerProps>`
     padding:25px;
     text-align:center;
     border:none;
-    background-position:center;
+    background-position:middle;
     font-weight:bold;
     &:hover{
         color:white;
@@ -74,24 +74,27 @@ const ColorBack = styled.div`
     background-clip:text;
     background-position:middle;
     padding:5px;
-    &:hover{
+
+    &:hover   {
         background-clip:padding-box;
         color:white;
         border-radius:15px;
     }
+    
 `
 function toolbar(props: { color?: string }) {
     return (
         <ToolContainer mr="10vw" ml="auto">
             <layouts.flex >
-                <ColorBack>
+                <ColorBack >
                     <Buttons to="/" >Home</Buttons>
+                </ColorBack>
+               
+                <ColorBack>
+                    <Buttons to="/projects">Projects</Buttons>
                 </ColorBack>
                 <ColorBack>
                     <Buttons to="/resume">Resume</Buttons>
-                </ColorBack>
-                <ColorBack>
-                    <Buttons to="/projects">Projects</Buttons>
                 </ColorBack>
                 {/* <ColorBack>
                     <Buttons to="/themes">Themes</Buttons>

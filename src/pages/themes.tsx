@@ -1,5 +1,5 @@
 import React from "react";
-import Toolbar from "../layouts/Toolbar";
+import Toolbar from "../components/Toolbar";
 import styled from "@emotion/styled"
 import { background, color} from "styled-system"
 
@@ -14,9 +14,9 @@ interface themed {
 }
 
 const Background = styled.div<backgroundProps>`
+height:100vh;
   ${background}
   ${color}
-  height:100vh;
 `
 const underWater =
 {

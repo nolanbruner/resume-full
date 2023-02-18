@@ -2,12 +2,15 @@ import React from "react"
 import projectList from "../assets/projectList"
 import styled from "@emotion/styled"
 import { Link } from "react-router-dom"
-import * as layouts from "../layouts"
-import { ContainerProps } from "../layouts/style"
+import * as layouts from "../components"
+import { ContainerProps } from "../components/style"
 const StyledLink = styled(Link) <ContainerProps>`
     text-decoration:none;
     color:blue;
     padding:0px;
+    &:hover{
+        color:purple;
+    }
 `
 
 

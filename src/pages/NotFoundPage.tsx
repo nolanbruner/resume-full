@@ -1,5 +1,5 @@
 import React from "react";
-import Toolbar from "../layouts/Toolbar";
+import Toolbar from "../components/Toolbar";
 const NotFoundPage = () => (
     <>
         <Toolbar />

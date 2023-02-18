@@ -1,11 +1,11 @@
 import React from 'react';
-import * as layouts from "../layouts"
+import * as layouts from "."
 
 
 const CommentsList = ({ comments }: any) => (
     <>
         <h3>Comments:</h3>
-        {!comments ? <div><layouts.statement>no comments yet</layouts.statement></div> :
+        {
             comments.map((comment: any, key: any) => (
                 <layouts.bubble key={key} m="10px" >
                     <layouts.flex ml="15px" >

@@ -2,13 +2,13 @@ import { useParams, Link } from "react-router-dom"
 
 import projectList from "../assets/projectList"
 import styled from "styled-components"
-import * as layouts from "../layouts"
+import * as layouts from "../components"
 import NotFoundPage from "./NotFoundPage"
-import Toolbar from "../layouts/Toolbar"
+import Toolbar from "../components/Toolbar"
 import React, { useEffect, useState } from "react"
-import CommentsList from "../layouts/commentsList"
-import AddCommentForm from "../layouts/addComment"
-import { ContainerProps } from "../layouts/style"
+// import CommentsList from "../components/commentsList"
+// import AddCommentForm from "../components/addComment"
+import { ContainerProps } from "../components/style"
 import * as system from "styled-system"
 import * as icons from "../icons"
 
@@ -21,29 +21,31 @@ const ProjectBlock = styled.div<ContainerProps>`
 const Project = (props: { isMobile: boolean }) => {
     const { name } = useParams()
     const project = projectList.find(project => project.name === name);
-    const [projectInfo, setProjectInfo] = useState({ upvotes: 0, comments: [{ username: "", text: "" }] });
-    const [commentformBool, setCommentformBool] = useState(false);
+    // const [projectInfo, setProjectInfo] = useState({ upvotes: 0, comments: [{ username: "", text: "" }] });
+    // const [commentformBool, setCommentformBool] = useState(false);
     useEffect(() => {
         window.scrollTo(0, 0);
         // setCommentformBool(false)
-        const fetchData = async () => {
-            
-            const result = await fetch(`/api/projects/${name}`)
-        //     .then((result)=> setProjectInfo(result.body.json()))
-        //   result.body?  console.log(result.body):console.log("no body")
-            // const body = await result.json();
-            const body = await result.text()
-            console.log("body")
-            console.log(body)
+        // const fetchData = async () => {
 
-            // setProjectInfo(body);
-        }
-        fetchData();
+        //     const result = await fetch(`/api/projects/${name}`)
+        // //     .then((result)=> setProjectInfo(result.body.json()))
+        // //   result.body?  console.log(result.body):console.log("no body")
+        //     // const body = await result.json();
+        //     const body = await result.text()
+        //     console.log("body")
+        //     console.log(body)
 
-    }, [name]);
+        //     // setProjectInfo(body);
+        // }
+        // fetchData();
+
+    },
+        // [name]
+    );
     if (!project) return <NotFoundPage />
     //mobile
-    if (window.innerWidth <= 500) return (
+    if (window.innerWidth <= 840) return (
         <>
             <layouts.Splash>
                 <layouts.Bod m=" auto"  >
@@ -56,8 +58,8 @@ const Project = (props: { isMobile: boolean }) => {
                         ))}
 
                     </ProjectBlock>
-                    {(project.link !== "") ? <a href={project.link}> Click Here to see in action</a> : <></>}
-                    {(project.gitLink !== "") ? <a href={project.gitLink}><icons.github /></a> : <></>}
+                    <div> {(project.link !== "") ? <a href={project.link}> Click Here to see in action</a> : <></>}</div>
+                    <div>   {(project.gitLink !== "") ? <a href={project.gitLink}>Click to View Github Repository</a> : <></>}</div>
                 </layouts.Bod>
 
                 <layouts.otherProjs name={name} />
@@ -79,10 +81,10 @@ const Project = (props: { isMobile: boolean }) => {
                     {(project.link !== "") ? <a href={project.link}> Click Here to See in Action</a> : <></>
 
                     }
-                    {(project.gitLink !== "") ? <a href={project.gitLink}><layouts.flex m="auto"><icons.github height="3vh" /> Click to View Repository</layouts.flex></a> : <></>
+                    {(project.gitLink !== "") ? <a href={project.gitLink}> Click to View Github Repository</a> : <></>
                     }
-                    <CommentsList comments={projectInfo.comments}/>
-                    <AddCommentForm></AddCommentForm>
+                    {/* <CommentsList comments={projectInfo.comments} /> */}
+                    {/* <AddCommentForm></AddCommentForm> */}
                 </ProjectBlock>
             </layouts.Bod>
 

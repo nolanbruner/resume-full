@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as layouts from "../layouts"
+import * as layouts from "."
 const AddCommentForm = ({ projectName, setprojectInfo }: any) => {
     const [username, setUsername] = useState('');
     const [commentText, setCommentText] = useState('');

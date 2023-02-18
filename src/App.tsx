@@ -4,7 +4,7 @@ import { default as Project } from "./pages/project"
 import { default as ProjectsPage } from "./pages/projectsPage"
 import { default as Themes } from "./pages/themes"
 import { default as NotFoundPage } from "./pages/NotFoundPage"
-import { default as About } from "./layouts/about"
+import { default as About } from "./components/about"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 function App() {
   return (

@@ -1,23 +1,24 @@
 
-import * as layouts from "./"
+import styled from "@emotion/styled"
+import * as layouts from "."
 
-import * as icons from "../icons"
+import * as icons from "./icons"
+
 const about = (props: { color: string }) => {
     return (
 
         <layouts.DIV width="90%" ml="3vw" fontFamily="sans-serif">
-            <layouts.statement p="10px" color={props.color}  fontWeight="" fontSize="25px" >
+            <layouts.statement p="10px" pb="0px" color={props.color} fontSize="25px" >
                 <h3 >About Me</h3>
-                <div>I am a recent graduate of the University of Kentucky where I achieved a B.S. in Computer Science, and minors in Philosophy and Mathmatics. I am currently residing in Louisville, Kentucky and open to relocate.
-                </div>
-                {/* <layouts.DIV p="10px" pl = "35px" >Degree: B.S. in Computer Science</layouts.DIV>
-                <layouts.DIV pl = "35px" p="10px"> College: University of Kentucky </layouts.DIV>
-                <layouts.DIV pl = "35px" p="10px">Minors: Mathmatics, Philosophy</layouts.DIV>
-                <layouts.DIV pl = "35px">Activities: Hiking, Snowboarding, Golfing, Fishing</layouts.DIV> */}
-
+                <layouts.statement p="4px">
+                    College graduate with extensive programming experience in full-stack applications and a passion for innovation and problem-solving.
+                </layouts.statement>
+                <layouts.statement p="3px">
+                    Looking for a full-time position that will provide practical experience to grow my web-development skills.
+                </layouts.statement>
             </layouts.statement>
-            <layouts.statement fontWeight="bold">
-            Currently Working with
+            <layouts.statement fontWeight="bold" pt="5.4vh">
+                Currently Working with
             </layouts.statement>
             <layouts.grid width="100%" >
                 <icons.js width="100px" p="10px" />
@@ -26,10 +27,10 @@ const about = (props: { color: string }) => {
                 <icons.nodejs width="100px" height="100px" p="10px" />
                 <icons.html width="100px" p="10px" />
                 <a href="https://github.com/"><icons.github width="100px" p="10px" /></a>
-                <icons.styled  width="100px" p="10px" />
+                <icons.styled width="100px" p="10px" />
             </layouts.grid>
-            <layouts.statement fontWeight="bold">
-            Previously Used
+            <layouts.statement fontWeight="bold" pt="25px">
+                Previously Used
             </layouts.statement>
             <layouts.grid>
                 <icons.swift width="100px" p="10px" />
