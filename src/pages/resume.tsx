@@ -18,11 +18,12 @@ function Resume(props: { ismobile: boolean }) {
     }
 
     if (props.ismobile) {
+        var w = window.screen.availWidth
         return (
             <>
-                <layouts.flex mt="30px">
-                    <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess} >
-                        <Page pageNumber={pageNumber} width={400} />
+                <layouts.flex p="auto" mt="30px" >
+                    <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}  >
+                        <Page pageNumber={pageNumber} width={w} />
                     </Document>
                 </layouts.flex>
             </>)

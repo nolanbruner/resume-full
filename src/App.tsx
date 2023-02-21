@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} >
-          <Route index element={<About color={""} />} />
+          <Route index element={<About color={""} iconWidth="100px" />} />
           <Route path="/resume" element={<Resume ismobile={false} />} />
           <Route path="/projects" element={< ProjectsPage isMobile={false} />} />
 

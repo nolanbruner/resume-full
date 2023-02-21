@@ -38,6 +38,7 @@ const ResumeButton = styled.button<ContainerProps>`
     position: relative;
     color:white;
     font-width:bold;
+    font-size:20px;
     z-index: 0;
     height:10vh;
     width: 60%;
@@ -59,13 +60,13 @@ const ResumeButton = styled.button<ContainerProps>`
 		content: '';
 		position: absolute;
 		z-index: -2;
-		left: -80%;
-		top: -90%;
-		width: 250%;
-		height: 320%;
+		left: -50%;
+		top: -150%;
+		width: 200%;
+		height: 400%;
 		background-repeat: no-repeat;
         background-position:center;
-		background-image: linear-gradient(orange,purple,blue);
+		background-image: linear-gradient(180deg,orange,orange,purple,blue);
 		animation: rotate 2s linear infinite;
 	}
     &::after {
