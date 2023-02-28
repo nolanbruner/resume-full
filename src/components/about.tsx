@@ -1,8 +1,7 @@
 
-import styled from "@emotion/styled"
 import * as layouts from "."
 
-import * as icons from "./icons"
+import * as icons from "../components/icons"
 
 const about = (props: { color: string,iconWidth:string }) => {
     return (

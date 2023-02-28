@@ -5,12 +5,11 @@ import styled from "styled-components"
 import * as layouts from "../components"
 import NotFoundPage from "./NotFoundPage"
 import Toolbar from "../components/Toolbar"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 // import CommentsList from "../components/commentsList"
 // import AddCommentForm from "../components/addComment"
 import { ContainerProps } from "../components/style"
 import * as system from "styled-system"
-import * as icons from "../icons"
 
 const ProjectBlock = styled.div<ContainerProps>`
     font-size:20px;
@@ -56,10 +55,17 @@ const Project = (props: { isMobile: boolean }) => {
                         {project.tech.map((part, key) => (
                             <p key={key}>{part}</p>
                         ))}
-
+                            <layouts.center fontWeight="600">Technologies used</layouts.center>
+                    <layouts.center> {project.icons.map((Icon, key) => (
+                        <Icon height="55px" width="55px" p="5px" pt="5px" pb="0" key={key} />
+                    ))}
+                    </layouts.center>
+                    <layouts.center>
+                     {(project.link !== "") ? <layouts.DIV  fontWeight="600"p="10px"> <a href={project.link} > Click Here to See in Action</a> </layouts.DIV>: <></>}
+                    {(project.gitLink !== "") ? <layouts.DIV fontWeight="600" p="10px"> <a href={project.gitLink}> Click to View Github Repository</a></layouts.DIV> : <></>}
+                    </layouts.center>
                     </ProjectBlock>
-                    <div> {(project.link !== "") ? <a href={project.link}> Click Here to see in action</a> : <></>}</div>
-                    <div>   {(project.gitLink !== "") ? <a href={project.gitLink}>Click to View Github Repository</a> : <></>}</div>
+                  
                 </layouts.Bod>
 
                 <layouts.otherProjs name={name} />
@@ -78,11 +84,15 @@ const Project = (props: { isMobile: boolean }) => {
                     {project.tech.map((part, key) => (
                         <p key={key}>{part}</p>
                     ))}
-                    {(project.link !== "") ? <a href={project.link}> Click Here to See in Action</a> : <></>
-
-                    }
-                    {(project.gitLink !== "") ? <a href={project.gitLink}> Click to View Github Repository</a> : <></>
-                    }
+                    <layouts.center fontWeight="600">Technologies used</layouts.center>
+                    <layouts.center> {project.icons.map((Icon, key) => (
+                        <Icon height="100px" width="100px" p="30px" pt="5px" pb="0" key={key} />
+                    ))}
+                    </layouts.center>
+                    <layouts.flex width="50vw">
+                     {(project.link !== "") ? <layouts.DIV m="auto" fontWeight="600"> <a href={project.link} > Click Here to See in Action</a> </layouts.DIV>: <></>}
+                    {(project.gitLink !== "") ? <layouts.DIV m="auto" fontWeight="600"> <a href={project.gitLink}> Click to View Github Repository</a></layouts.DIV> : <></>}
+                    </layouts.flex>
                     {/* <CommentsList comments={projectInfo.comments} /> */}
                     {/* <AddCommentForm></AddCommentForm> */}
                 </ProjectBlock>

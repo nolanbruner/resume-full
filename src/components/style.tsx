@@ -34,6 +34,7 @@ const center = styled.div<ContainerProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
+    ${system.fontWeight}
 `
 const flex = styled.div<FlexProps>`
     display:flex;
@@ -48,6 +49,7 @@ const DIV = styled.div<ContainerProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
+    ${system.fontWeight}
 `
 export const grid = styled.div<system.FlexboxProps & ContainerProps>`
     ${system.space}    

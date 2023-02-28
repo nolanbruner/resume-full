@@ -4,19 +4,19 @@ import * as layouts from "."
 
 const otherProjs = (props: { name?: string }) => {
     const otherProjects = projectList.filter(project => project.name !== props.name);
-    if (window.innerWidth <= 500) return (
+    if (window.innerWidth <= 840) return (
         <>
             <layouts.center><h3 style={{ color: "white" }}>Other Projects</h3></layouts.center>
 
             <layouts.Bod m="0px" p="auto" width="auto">
-                <layouts.grid>
+                <layouts.DIV>
                     {otherProjects.map((project, key) => (
                         <div key={key}>
                             <Link to={`/project/${project.name}`}> < h2 >{project.title}</h2> </Link>
                             <p>{project.overview}</p>
                         </div>
                     ))}
-                </layouts.grid>
+                </layouts.DIV>
             </layouts.Bod>
 
 
