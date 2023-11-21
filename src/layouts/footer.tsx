@@ -4,6 +4,9 @@ const Foot = styled.div`
     color:white;
     text-align:center;
     margin:0px;
+    padding-top:10px;
+    padding-bottom:20px;
+
 `
 const HyperLink = styled.a`
     color:white;
@@ -13,15 +16,15 @@ const HyperLink = styled.a`
 function footer() {
     return (
         <Foot>
-            <h3>Get Connected</h3>
-            <div>Nolan Bruner</div>
-            <HyperLink href="tel:5026813983">Phone: (502)-681-3983</HyperLink>
+            <h3>Call for more information</h3>
             <div></div>
-            <HyperLink>Email: nwbr227@uky.edu</HyperLink>
+            <HyperLink href="tel:5134301994">Phone: (513)-430-1994</HyperLink>
             <div></div>
-            <HyperLink href="">Github</HyperLink>
+            {/* <HyperLink>Email: nwbr227@uky.edu</HyperLink> */}
             <div></div>
-            <HyperLink href="">linkedin</HyperLink>
+            {/* <HyperLink href="">Github</HyperLink>
+            <div></div>
+            <HyperLink href="">linkedin</HyperLink> */}
         </Foot>
     )
 }

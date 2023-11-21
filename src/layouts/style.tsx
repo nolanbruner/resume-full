@@ -1,12 +1,12 @@
 import styled from "@emotion/styled"
 import * as system from "styled-system"
 
-export interface ContainerProps extends system.PositionProps, system.LayoutProps, system.TypographyProps, system.SpaceProps { }
+export interface ContainerProps extends system.PositionProps, system.BackgroundImageProps,system.BackgroundColorProps,system.LayoutProps, system.TypographyProps, system.SpaceProps { }
 
-export interface FlexProps extends ContainerProps, system.FlexProps, system.FlexDirectionProps, system.FlexboxProps, system.BackgroundProps, system.JustifyContentProps { }
+export interface FlexProps extends ContainerProps, system.FlexProps,system.FlexboxProps, system.FlexDirectionProps, system.FlexboxProps, system.BackgroundProps, system.JustifyContentProps { }
 
 const Bod = styled.div<ContainerProps>`
-    width:80vw;
+    width:70vw;
     // color: rgba(0,0,0,0.7);
     background-color:rgba(255,255,255,0.85);
     border-radius:10px 0px 10px 10px;
@@ -41,6 +41,7 @@ const flex = styled.div<FlexProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
+    ${system.flexbox}
 `
 const DIV = styled.div<ContainerProps>`
     display:comumn;
@@ -48,6 +49,8 @@ const DIV = styled.div<ContainerProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
+    ${system.color}
+    ${system.textAlign}
 `
 export const grid = styled.div<system.FlexboxProps & ContainerProps>`
     ${system.space}    

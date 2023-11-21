@@ -4,25 +4,26 @@ import * as layouts from "."
 import * as system from "styled-system"
 import styled from "@emotion/styled"
 import { ContainerProps } from "./style"
+import hph from "../assets/hph.jpg"
 const ToolContainer = styled.div<ContainerProps>`
-    width: 35vw;
-    background-color:white;
-    border-radius:45px 10px 0px 0px;
-    padding:15px;
+    width: 100%;
+    background-color:green;
+    padding:0px;
+    margin:0;
     opacity:.8;
     ${system.space}
     ${system.width}
     ${system.layout}
-    ${system.backgroundImage}
+    ${system.color}
 `
 const Buttons = styled(Link) <ContainerProps>`
     text-decoration:none;
-    color:transparent;
+    color:white;
     width:10vh;
     padding:25px;
     text-align:center;
     border:none;
-    background-position:center;
+    // background-position:center;
     font-weight:bold;
     &:hover{
         color:white;
@@ -31,6 +32,7 @@ const Buttons = styled(Link) <ContainerProps>`
     ${system.space}
     ${system.width}
     ${system.layout}
+    ${system.background}
 `
 // const DropDownButton = styled.select<ContainerProps>`
 //     width:auto;
@@ -69,30 +71,51 @@ const Buttons = styled(Link) <ContainerProps>`
 //     ${system.layout}
 // `
 const ColorBack = styled.div`
-    background-image:linear-gradient(to bottom right,orange,purple,blue);
+    // background-image:linear-gradient(to bottom right,orange,purple,blue);
     background-size:200% 200%;
     background-clip:text;
+    position:relative;
     background-position:middle;
-    padding:5px;
+    height:3vh;
+    // padding:5px;
     &:hover{
         background-clip:padding-box;
         color:white;
-        border-radius:15px;
+        border:2px solid white
+        // border-radius:15px;
     }
 `
+const Logo = styled.img`
+    padding:0px;
+    height: 20vh;
+    position:absolute;
+    overflow: hidden;
+    top:-4vh;
+`
 function toolbar(props: { color?: string }) {
-    return (
-        <ToolContainer mr="10vw" ml="auto">
+    return (<>
+    {/* <layouts.DIV backgroundColor="blue">He</layouts.DIV> */}
+        <ToolContainer mr="auto" ml="auto" height="10vh">
             <layouts.flex >
-                <ColorBack>
-                    <Buttons to="/" >Home</Buttons>
+                <ColorBack><Logo src={hph} ></Logo></ColorBack>
+            </layouts.flex>
+            <layouts.flex ml="15vw" >
+
+                <ColorBack >
+                    <Buttons height="100%" to="/" >Home</Buttons>
                 </ColorBack>
                 <ColorBack>
-                    <Buttons to="/resume">Resume</Buttons>
+                    <Buttons to="/services">Services</Buttons>
                 </ColorBack>
                 <ColorBack>
-                    <Buttons to="/projects">Projects</Buttons>
+                    <Buttons to="/gallary">Gallary</Buttons>
                 </ColorBack>
+                <ColorBack>
+                    <Buttons to="/aboutUs">About Us</Buttons>
+                </ColorBack>
+                {/* <ColorBack>
+                    <Buttons to="/resume">Contact Us</Buttons>
+                </ColorBack> */}
                 {/* <ColorBack>
                     <Buttons to="/themes">Themes</Buttons>
                 </ColorBack> */}
@@ -104,6 +127,7 @@ function toolbar(props: { color?: string }) {
 
             </layouts.flex>
         </ToolContainer>
+        </>
     )
 }
 export default toolbar

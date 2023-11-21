@@ -4,7 +4,6 @@ import styled from "@emotion/styled"
 import gradPhoto from "../assets/gradphoto2.jpg"
 import * as layouts from "../layouts"
 import * as icons from "../icons"
-import { download } from "../pages/resume";
 import { ContainerProps } from "./style";
 const Role = styled.div<system.LayoutProps>`
     border-radius:10px;
@@ -60,7 +59,7 @@ const Sidebar = (props: { width: string }) => {
             <Hyperlink href="tel:5026813983"> <layouts.flex p="5px"><icons.phone width="20px" height="20px" /><layouts.DIV pl="4px">502-681-3983 </layouts.DIV></layouts.flex></Hyperlink>
             <layouts.flex p="5px"><icons.calander width="20px" height="20px" /><layouts.DIV pl="4px">September 22,1999</layouts.DIV></layouts.flex>
             <layouts.flex p="5px"><icons.pin width="20px" height="20px" /><layouts.DIV pl="4px">Louisville, KY</layouts.DIV></layouts.flex>
-            <layouts.center p="25px"><ResumeButton onClick={() => download()}> Download Resume</ResumeButton></layouts.center>
+            {/* <layouts.center p="25px"><ResumeButton onClick={() => download()}> Download Resume</ResumeButton></layouts.center> */}
 
         </Side>
     )
